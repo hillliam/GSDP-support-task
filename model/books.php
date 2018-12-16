@@ -84,15 +84,15 @@ function insettodb()
 {
     $books = $GLOBALS['database_books'];
     $clean = "delete from books;";
-    $conection = connet();
+    $connection = connet();
     print $clean;
-    $conection->query($clean);
+    query($clean);
     foreach ($books as $book) {
         $start = "INSERT INTO `books`(`id`, `genre_id`, `name`, `author`, `description`, `pages`, `sold`, `price`) VALUES (";
         $statment = $book["id"] . "," . $book["genre_id"] . ",'" . $book["name"] . "','" . $book["author"] . "','" . helper($book["description"]) . "'," . $book["pages"] . "," . $book["sold"] . "," . $book["price"] . ");";
         print $start;
         print $statment . "<br/>";
-        $conection->query($start  + $statment);
+        query($start  + $statment);
     }
 }
 
@@ -102,9 +102,10 @@ function insettodb()
  */
 function findAllBooks() {
     $statment = "select * from books";
-    $books = connet()->query($statment);
+    $connection = connet();
+    $books = query($statment);
     $book = array();
-    while ($row = $books->fetch_assoc()) {
+    while ($row = getrows($books)) {
         array_push($book, $row);
     }
     return $book;

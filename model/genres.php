@@ -52,14 +52,16 @@ function _queryArray($query) {
 }
 
 function _queryOne($query) {
-    $res = connet()->query($query);
-    return $res->fetch_assoc();
+    $connection = connet();
+    $res = query($query);
+    return getrows($res);
 }
 
 function getallgenres()
 {
 	$sql = "SELECT * FROM gernres";
-	$result = connet()->query($sql);
+        $connection = connet();
+	$result = query($sql);
 	return $result;
 }
 
