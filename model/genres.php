@@ -45,7 +45,7 @@ function _queryArray($query) {
     
     // Copy the genres over to the array.
     $genres = array();
-    while ($row = $res->fetch_assoc()) {
+    while ($row = getrows($res)) {
         array_push($genres, $row);
     }
     return $genres;
