@@ -61,7 +61,7 @@ addToRecentlyViewed($book);
             calling <b><?php print STORE_NUMBER; ?></b>
         </p>
         <p>
-            <a href="addtobuylist?buylist=<?php {print $book["id"];}?>">add to the buy list</a>
+            <a href="addtobuylist.php?buylist=<?php {print $book["id"];}?>">add to the buy list</a>
         </p>
         
         <h3>Description</h3>
