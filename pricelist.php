@@ -42,13 +42,13 @@ $books = getpricelist();
             <tr>
                 <p><td>
                     <!-- We use a link for the book name which links to the book page -->
-                    <a href="book?id=<?php print $book["id"]; ?>">
+                    <a href="book.php?id=<?php print $book["id"]; ?>">
                         <?php print $book["name"]; ?>
                     </a>
                 </td>
                 <td><?php echo $book["author"]; ?></td>
                 <td><?php echo sprintf("£%01.2f", $book["price"]); ?></td>
-                <td><a href="removefrombuylist?buylist=<?php print $book["id"]; ?>">remove</a></td>
+                <td><a href="removefrombuylist.php?buylist=<?php print $book["id"]; ?>">remove</a></td>
                 </p>
             </tr>
         <?php endforeach; ?>

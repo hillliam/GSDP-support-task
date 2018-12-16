@@ -35,7 +35,7 @@ $lightBooks = findLightBooks(100);
             <div>
                 <div>
                     <b>
-                        <a href="book?id=<?php print $book["id"]; ?>">
+                        <a href="book.php?id=<?php print $book["id"]; ?>">
                             <?php print $book["name"]; ?>
                         </a>
                     </b>

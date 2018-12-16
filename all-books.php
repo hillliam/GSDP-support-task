@@ -72,7 +72,7 @@ if (isset($_GET["genre"])) {
                 <tr>
                     <td>
                         <!-- We use a link for the book name which links to the book page -->
-                        <a href="book?id=<?php print $book["id"]; ?>">
+                        <a href="book.php?id=<?php print $book["id"]; ?>">
                             <?php print $book["name"]; ?>
                         </a>
                     </td>
