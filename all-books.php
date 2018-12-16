@@ -77,7 +77,7 @@ if (isset($_GET["genre"])) {
                         </a>
                     </td>
                     <td><?php echo $book["author"]; ?></td>
-                    <td><?php echo sprintf("£%01.2f",$book["price"]); ?></td>
+                    <td><?php echo $book["price"]; ?></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
