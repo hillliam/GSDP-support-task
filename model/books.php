@@ -88,7 +88,7 @@ function insettodb()
     print $clean;
     query($clean);
     foreach ($books as $book) {
-        $start = "INSERT INTO `books`(`id`, `genre_id`, `name`, `author`, `description`, `pages`, `sold`, `price`) VALUES (";
+        $start = "INSERT INTO books(id, genre_id, name, author, description, pages, sold, price) VALUES (";
         $statment = $book["id"] . "," . $book["genre_id"] . ",'" . $book["name"] . "','" . $book["author"] . "','" . helper($book["description"]) . "'," . $book["pages"] . "," . $book["sold"] . "," . $book["price"] . ");";
         print $start;
         print $statment . "<br/>";
